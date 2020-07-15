@@ -7,12 +7,18 @@ namespace DSS_CCProject.GAClasses
 {
     public class StepChromosome : ChromosomeBase
     {
+        private StepGeneValueWrapper genome;
         public StepChromosome() : base(1)
         {
         }
 
         public StepChromosome(int length) : base(length)
         {
+        }
+
+        public StepChromosome(StepGeneValueWrapper genome) : base (genome.Length)
+        {
+            this.genome = genome;
         }
 
         public override IChromosome CreateNew()
@@ -22,7 +28,7 @@ namespace DSS_CCProject.GAClasses
 
         public override Gene GenerateGene(int geneIndex)
         {
-            throw new NotImplementedException();
+            return new Gene(genome[geneIndex]);
         }
     }
 }
