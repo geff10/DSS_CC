@@ -16,9 +16,10 @@ namespace DSS_CCProject.GAClasses
         {
         }
 
-        public StepChromosome(StepGeneValueWrapper genome) : base (genome.Length)
+        public StepChromosome(StepGeneValueWrapper genomeData) : base (genomeData.Length * genomeData.GetStepCount())
         {
-            this.genome = genome;
+            this.genome = genomeData;
+            CreateGenes();
         }
 
         public override IChromosome CreateNew()

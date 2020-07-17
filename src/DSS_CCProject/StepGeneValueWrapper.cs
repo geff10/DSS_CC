@@ -1,18 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DSS_CCProject
 {
     public class StepGeneValueWrapper
     {
-        private List<Step> steps;
+        private int c_stepCount = 6;
+        private List<Job> jobs;
         public int Length { get; private set; }
+
+        public StepGeneValueWrapper(List<Job> jobList)
+        {
+            this.jobs = jobList;
+        }
 
         public Step this[int i]
         {
-            get { return steps[i]; }
-            set { steps[i] = value; }
+            get { return jobs.ElementAt(i / c_stepCount).Steps[i % c_stepCount] }
+            set { jobs.ElementAt(i / c_stepCount).Steps[i % c_stepCount] = value; }
+        }
+
+        public int GetStepCount()
+        {
+            return c_stepCount;
         }
     }
 }

@@ -2,5 +2,8 @@
 {
     public class Step
     {
+        private long id;
+
+        public long ID { get => id; }
     }
 }
