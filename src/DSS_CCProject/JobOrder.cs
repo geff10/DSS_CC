@@ -5,17 +5,20 @@ using System.Text;
 
 namespace DSS_CCProject
 {
-    public class StepGeneValueWrapper
+    public class JobOrder
     {
         private int c_stepCount = 6;
         private List<Job> jobs;
         public int Length { get; private set; }
 
-        public StepGeneValueWrapper(List<Job> jobList)
+        public JobOrder()
+        {
+        }
+
+        public JobOrder(List<Job> jobList)
         {
             this.jobs = jobList;
         }
-
         public Step this[int i]
         {
             get { return jobs.ElementAt(i / c_stepCount).Steps[i % c_stepCount]; }

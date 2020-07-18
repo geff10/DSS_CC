@@ -18,7 +18,7 @@ namespace DSS_CCProject.GAClasses
 
         public StepChromosome(StepGeneValueWrapper genomeData) : base (genomeData.Length * genomeData.GetStepCount())
         {
-            this.genome = genomeData;
+            this.genome = genomeData; //TODO: map joborder
             CreateGenes();
         }
 

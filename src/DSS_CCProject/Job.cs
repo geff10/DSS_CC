@@ -8,6 +8,6 @@ namespace DSS_CCProject
     {
         private List<Step> steps;
 
-        public List<Step> Steps => steps;
+        public List<Step> Steps { get => steps; set => steps = value; }
     }
 }
