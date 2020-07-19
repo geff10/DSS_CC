@@ -8,7 +8,7 @@ namespace DSS_CCProject
 {
     public class CycleFrameFactory
     {
-        public ReadOnlyCollection<Machine> Machines { get; } = new ReadOnlyCollection<Machine>(
+        public static ReadOnlyCollection<Machine> Machines { get; } = new ReadOnlyCollection<Machine>(
         new Machine[] 
             {
                 new Machine(0, OperationType.Cutting),

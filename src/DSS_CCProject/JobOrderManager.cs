@@ -17,7 +17,7 @@ namespace DSS_CCProject
         public void ReadJobOrders()
         {
             jobOrders = new List<JobOrder>();
-            throw new NotImplementedException()
+            throw new NotImplementedException();
         }
 
     }
