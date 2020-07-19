@@ -7,10 +7,20 @@ namespace DSS_CCProject
 {
     class Machine
     {
-        long id;
-        MachineType machineType;
+        private long id;
+        private MachineType machineType;
 
         public long Id { get => id; set => id = value; }
         public MachineType MachineType { get => machineType; set => machineType = value; }
+
+        public Machine()
+        {
+        }
+
+        public Machine(long machineId, MachineType machineType)
+        {
+            this.id = machineId;
+            this.machineType = machineType;
+        }
     }
 }
