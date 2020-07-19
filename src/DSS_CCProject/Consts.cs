@@ -2,8 +2,9 @@
 {
     public class Consts
     {
-        public enum MachineType
+        public enum OperationType
         {
+            Undefined = -1,
             Cutting = 0,
             Blending = 1,
             Welding = 2,

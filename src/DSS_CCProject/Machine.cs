@@ -5,19 +5,19 @@ using static DSS_CCProject.Consts;
 
 namespace DSS_CCProject
 {
-    class Machine
+    public class Machine
     {
         private long id;
-        private MachineType machineType;
+        private OperationType machineType;
 
         public long Id { get => id; set => id = value; }
-        public MachineType MachineType { get => machineType; set => machineType = value; }
+        public OperationType OperationType { get => machineType; set => machineType = value; }
 
         public Machine()
         {
         }
 
-        public Machine(long machineId, MachineType machineType)
+        public Machine(long machineId, OperationType machineType)
         {
             this.id = machineId;
             this.machineType = machineType;
