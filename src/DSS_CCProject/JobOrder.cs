@@ -10,6 +10,9 @@ namespace DSS_CCProject
         private int c_stepCount = 6;
         private List<Job> jobs;
         public int Length { get; private set; }
+        public DateTime DueDate { get; private set; }
+
+        DateTime dueDate;
 
         public JobOrder()
         {
